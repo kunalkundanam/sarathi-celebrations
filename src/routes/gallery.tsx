@@ -26,11 +26,12 @@ export const Route = createFileRoute("/gallery")({
 function GalleryPage() {
   const { t } = useLang();
   const tiles = [
-    { img: heroImg, caption: t.services[0].title, span: "md:col-span-2 md:row-span-2" },
-    { img: sangeetImg, caption: t.events[0].title, span: "" },
-    { img: birthdayImg, caption: t.events[1].title, span: "" },
-    { img: corporateImg, caption: t.events[2].title, span: "md:col-span-2" },
+    { img: heroImg, caption: t.services[0]?.title ?? "", span: "md:col-span-2 md:row-span-2" },
+    { img: sangeetImg, caption: t.events[0]?.title ?? "", span: "" },
+    { img: birthdayImg, caption: t.events[1]?.title ?? "", span: "" },
+    { img: corporateImg, caption: t.events[2]?.title ?? "", span: "md:col-span-2" },
   ];
+
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
