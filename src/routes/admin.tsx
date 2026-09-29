@@ -72,7 +72,7 @@ function AdminPage() {
   if (!unlocked) {
     return (
       <main className="mx-auto flex min-h-[70vh] max-w-md items-center px-6 py-16">
-        <form onSubmit={signIn} className="glass w-full rounded-2xl p-7">
+        <form method="post" onSubmit={signIn} className="glass w-full rounded-2xl p-7">
           <h1 className="text-3xl font-bold">Gallery admin</h1>
           <p className="mt-2 text-sm text-muted-foreground">Enter the admin password to manage event photos.</p>
           <label htmlFor="admin-password" className="mt-7 block text-sm font-medium">Password</label>

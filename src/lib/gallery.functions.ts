@@ -12,7 +12,8 @@ function sessionOptions() {
     password: process.env["ADMIN_SESSION_SECRET"]!,
     name: "sarathi-gallery-admin",
     maxAge: 60 * 60 * 8,
-    cookie: { httpOnly: true, secure: true, sameSite: "lax" as const, path: "/" },
+    // "none" so the cookie also works when the site is shown inside the editor preview frame
+    cookie: { httpOnly: true, secure: true, sameSite: "none" as const, path: "/" },
   };
 }
 
