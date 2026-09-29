@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "सारथी इव्हेंट्स ॲन्ड सेलिब्रेशन्स" },
       {
         property: "og:description",
-        content: "Weddings, birthdays and department functions planned with heart.",
+        content: "Birthdays and department functions planned with heart.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

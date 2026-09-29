@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/i18n";
 import { BookingForm } from "@/components/BookingForm";
 import heroImg from "@/assets/hero-celebration.jpg";
-import sangeetImg from "@/assets/event-sangeet.jpg";
+import culturalImg from "@/assets/event-cultural.jpg";
 import birthdayImg from "@/assets/event-birthday.jpg";
 import corporateImg from "@/assets/event-corporate.jpg";
 
@@ -13,12 +13,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "कर्तव्यदक्षांच्या कुटुंबाचा, हक्काचा विरंगुळा! विवाह, वाढदिवस, विभागीय व सांस्कृतिक कार्यक्रमांचे संपूर्ण नियोजन — पुणे.",
+          "कर्तव्यदक्षांच्या कुटुंबाचा, हक्काचा विरंगुळा! वाढदिवस, विभागीय व सांस्कृतिक कार्यक्रमांचे संपूर्ण नियोजन — पुणे.",
       },
       { property: "og:title", content: "सारथी इव्हेंट्स ॲन्ड सेलिब्रेशन्स" },
       {
         property: "og:description",
-        content: "Weddings, birthdays and department functions planned with heart in Pune.",
+        content: "Birthdays and department functions planned with heart in Pune.",
       },
     ],
   }),
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const { t } = useLang();
-  const gallery = [sangeetImg, birthdayImg, corporateImg];
+  const gallery = [culturalImg, birthdayImg, corporateImg];
 
   return (
     <>

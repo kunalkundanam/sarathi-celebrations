@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/i18n";
 import heroImg from "@/assets/hero-celebration.jpg";
-import sangeetImg from "@/assets/event-sangeet.jpg";
+import culturalImg from "@/assets/event-cultural.jpg";
 import birthdayImg from "@/assets/event-birthday.jpg";
 import corporateImg from "@/assets/event-corporate.jpg";
 
@@ -11,12 +11,12 @@ export const Route = createFileRoute("/gallery")({
       { title: "गॅलरी | सारथी इव्हेंट्स ॲन्ड सेलिब्रेशन्स" },
       {
         name: "description",
-        content: "सारथी इव्हेंट्सने पार पाडलेल्या अलीकडील विवाह, वाढदिवस व विभागीय सोहळ्यांची छायाचित्रे.",
+        content: "सारथी इव्हेंट्सने पार पाडलेल्या अलीकडील वाढदिवस व विभागीय सोहळ्यांची छायाचित्रे.",
       },
       { property: "og:title", content: "गॅलरी | Sarathi Events & Celebrations" },
       {
         property: "og:description",
-        content: "Photos from recent weddings, birthdays and department functions.",
+        content: "Photos from recent birthdays and department functions.",
       },
     ],
   }),
@@ -27,7 +27,7 @@ function GalleryPage() {
   const { t } = useLang();
   const tiles = [
     { img: heroImg, caption: t.services[0]?.title ?? "", span: "md:col-span-2 md:row-span-2" },
-    { img: sangeetImg, caption: t.events[0]?.title ?? "", span: "" },
+    { img: culturalImg, caption: t.events[0]?.title ?? "", span: "" },
     { img: birthdayImg, caption: t.events[1]?.title ?? "", span: "" },
     { img: corporateImg, caption: t.events[2]?.title ?? "", span: "md:col-span-2" },
   ];
