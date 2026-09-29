@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "सारथी इव्हेंट्स ॲन्ड सेलिब्रेशन्स" },
       {
         property: "og:description",
-        content: "Weddings, birthdays and department functions planned with heart.",
+        content: "Birthdays and department functions planned with heart.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/__l5e/assets-v1/5c6109e1-bcf2-46f1-b5c7-cf84a2471520/sarathi-logo.jpeg", type: "image/jpeg" },
     ],
   }),
 

@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/sarathi-logo.jpeg.asset.json";
 import { LANGS, useLang } from "@/lib/i18n";
 
 export function SiteHeader() {
@@ -10,9 +11,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-card/60 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <span className="grid size-9 place-items-center rounded-xl bg-brand/80 font-display text-accent">
-            सा
-          </span>
+          <img src={logo.url} alt={t.brand} className="size-10 rounded-xl object-cover" />
           <span className="hidden text-sm font-semibold tracking-wide sm:block">
             {t.brand}
           </span>

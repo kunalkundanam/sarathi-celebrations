@@ -8,12 +8,12 @@ export const Route = createFileRoute("/book")({
       { title: "बुकिंग | सारथी इव्हेंट्स ॲन्ड सेलिब्रेशन्स" },
       {
         name: "description",
-        content: "आपल्या विवाह, वाढदिवस किंवा विभागीय कार्यक्रमासाठी सारथी इव्हेंट्सकडे चौकशी नोंदवा.",
+        content: "आपल्या वाढदिवस किंवा विभागीय कार्यक्रमासाठी सारथी इव्हेंट्सकडे चौकशी नोंदवा.",
       },
       { property: "og:title", content: "बुकिंग | Sarathi Events & Celebrations" },
       {
         property: "og:description",
-        content: "Send an enquiry for your wedding, birthday or department function.",
+        content: "Send an enquiry for your birthday or department function.",
       },
     ],
   }),

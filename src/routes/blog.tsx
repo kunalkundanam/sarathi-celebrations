@@ -7,7 +7,7 @@ export const Route = createFileRoute("/blog")({
       { title: "ब्लॉग | सारथी इव्हेंट्स ॲन्ड सेलिब्रेशन्स" },
       {
         name: "description",
-        content: "विवाह नियोजन, सजावट संकल्पना व विभागीय कार्यक्रमांविषयी सारथी इव्हेंट्सचे लेख.",
+        content: "कौटुंबिक सोहळा नियोजन, सजावट संकल्पना व विभागीय कार्यक्रमांविषयी सारथी इव्हेंट्सचे लेख.",
       },
       { property: "og:title", content: "ब्लॉग | Sarathi Events & Celebrations" },
       {
