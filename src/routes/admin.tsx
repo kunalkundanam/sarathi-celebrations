@@ -57,9 +57,10 @@ function AdminPage() {
     event.preventDefault();
     setBusy(true);
     setError("");
+    const form = event.currentTarget;
     try {
-      await upload({ data: new FormData(event.currentTarget) });
-      event.currentTarget.reset();
+      await upload({ data: new FormData(form) });
+      form.reset();
       await refresh();
     } catch (uploadError) {
       setError(uploadError instanceof Error ? uploadError.message : "Upload failed.");
