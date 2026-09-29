@@ -116,7 +116,8 @@ export const deleteGalleryItem = createServerFn({ method: "POST" })
       .select("image_path")
       .eq("id", data.id)
       .maybeSingle();
-    if (lookupError || !item) throw new Error("Photo not found.");
+    if (lookupError) throw new Error("Photo could not be looked up.");
+    if (!item) return { ok: true }; // already deleted
 
     const { error: storageError } = await supabaseAdmin.storage.from(BUCKET).remove([item.image_path]);
     if (storageError) throw new Error("The image could not be removed.");
