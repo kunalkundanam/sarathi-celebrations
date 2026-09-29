@@ -116,7 +116,18 @@ function AdminPage() {
             <img src={item.imageUrl} alt={item.caption} className="aspect-[4/3] w-full object-cover" />
             <div className="flex items-center justify-between gap-3 p-4">
               <p className="font-medium">{item.caption}</p>
-              <Button variant="ghost" size="icon" title="Delete photo" aria-label={`Delete ${item.caption}`} onClick={async () => { await remove({ data: { id: item.id } }); await refresh(); }}>
+              <Button variant="ghost" size="icon" title="Delete photo" aria-label={`Delete ${item.caption}`} disabled={busy} onClick={async () => {
+                setBusy(true);
+                setError("");
+                try {
+                  await remove({ data: { id: item.id } });
+                } catch (deleteError) {
+                  setError(deleteError instanceof Error ? deleteError.message : "Delete failed.");
+                } finally {
+                  await refresh();
+                  setBusy(false);
+                }
+              }}>
                 <Trash2 />
               </Button>
             </div>
